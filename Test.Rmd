@@ -1,0 +1,31 @@
+---
+title: "Hello R Markdown"
+author: "Awesome Me"
+date: "2018-02-14"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+This is a paragraph in an **R** _Markdown_ document.
+
+```{r} 
+library(palmerpenguins)
+library(tidyverse)
+```
+
+![alt](/Users/apurbachakraborty/Desktop/Bear Hat.gif)
+B~e~l^o^w is a code chunk:
+
+```{r}
+fit = lm(dist ~ speed, data = cars)
+b   = coef(fit)
+plot(cars)
+abline(fit)
+
+ggplot(data = penguins,aes(x=flipper_length_mm,y=bill_length_mm,color = species,shape = island))+
+  geom_point()
+
+```
+
+The slope of the regression is `r b[2]`.
